@@ -231,11 +231,16 @@ elif chart_option == "Busiest Airports (Top 15)":
     )
 
 elif chart_option == "Price vs Duration Scatter Plot":
-    fig = px.scatter(df_viz, x='Duration_Minutes', y='Price_Float', color='Company', title=chart_titles[chart_option], color_discrete_map=airline_color_map, labels={"Duration_Minutes": "Duration (minutes)", "Price_Float": "Price"}, hover_data=['Company'])
-    fig_trend = px.scatter(df_viz, x='Duration_Minutes', y='Price_Float', trendline='ols', trendline_scope='overall')
-    trendline_trace = fig_trend.data[1]
-    trendline_trace.name = 'Trendline'
-    fig.add_trace(trendline_trace)
+    fig = px.scatter(
+        df_viz,
+        x='Duration_Minutes',
+        y='Price_Float',
+        color='Company',
+        title=chart_titles[chart_option],
+        color_discrete_map=airline_color_map,
+        opacity=0.7,
+        hover_data=['Company']
+    )
 
 else:
     fig = go.Figure()
