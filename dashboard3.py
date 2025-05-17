@@ -6,7 +6,8 @@ import plotly.graph_objects as go
 
 st.set_page_config(layout="wide", page_title="Flight Data Dashboard")
 st.title("Aviation Analytics Dashboard")
-st.markdown('<p style="font-style: italic; font-size:14px;"Made By-Poorvi Khanduja</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-style: italic; font-size:14px;">Made By-Poorvi Khanduja</p>', unsafe_allow_html=True)
+
 
 DATA_PATH = r'data.csv'
 df_raw = pd.read_csv(DATA_PATH)
