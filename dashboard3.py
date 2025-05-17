@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 st.set_page_config(layout="wide", page_title="Flight Data Dashboard")
 st.title("Aviation Analytics Dashboard")
 
-DATA_PATH = r'C:\Users\Admin\Downloads\Flights Dashboard\data.csv'
+DATA_PATH = r'data.csv'
 df_raw = pd.read_csv(DATA_PATH)
 
 conn = sqlite3.connect(':memory:')
